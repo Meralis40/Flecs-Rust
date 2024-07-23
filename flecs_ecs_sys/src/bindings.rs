@@ -1223,6 +1223,7 @@ pub struct ecs_os_api_t {
     #[doc = "< File used for logging output\n (hint, log_ decides where to write)"]
     pub log_out_: *mut FILE,
 }
+#[link(name="flecs",kind="dylib")]
 extern "C" {
     #[doc = "Static OS API variable with configured callbacks."]
     pub static mut ecs_os_api: ecs_os_api_t;
